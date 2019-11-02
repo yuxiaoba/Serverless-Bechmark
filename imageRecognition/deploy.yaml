@@ -1,0 +1,10 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: inception-fn
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - image: docker.io/gigi1982/inception-fn
