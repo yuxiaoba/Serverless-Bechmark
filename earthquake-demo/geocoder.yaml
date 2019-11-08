@@ -7,10 +7,10 @@ spec:
   template:
     spec:
       containers:
-        - image: registry.cn-shenzhen.aliyuncs.com/yuxiaoba/geocoder:v1
+        - image: registry.cn-shenzhen.aliyuncs.com/yuxiaoba/earth-geocoder:v1
           env:
             - name: DB_HOST
-              value: "postgres.default.svc.cluster.local" #"geocodedb-postgresql.default.svc.cluster.local"
+              value: "postgres.default.svc.cluster.local" 
             - name: DB_DATABASE
               value: "geocode"
             - name: DB_USER
