@@ -1,0 +1,10 @@
+apiVersion: messaging.knative.dev/v1alpha1
+kind: Channel
+metadata:
+  name: geocode-channel
+  namespace: default    
+spec:
+  channelTemplate:
+    apiVersion: messaging.knative.dev/v1alpha1
+    kind: InMemoryChannel
+

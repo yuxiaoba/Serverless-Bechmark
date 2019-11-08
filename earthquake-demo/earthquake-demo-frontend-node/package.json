@@ -1,0 +1,25 @@
+{
+  "name": "earthquake-demo-frontend-node",
+  "version": "1.0.0",
+  "description": "Earthquake Demo",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gswk/earthquake-demo-frontend-node.git"
+  },
+  "author": "GSWK",
+  "license": "CC-BY-4.0",
+  "bugs": {
+    "url": "https://github.com/gswk/earthquake-demo-frontend-node/issues"
+  },
+  "homepage": "https://github.com/gswk/earthquake-demo-frontend-node#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "path": "^0.12.7"
+  }
+}

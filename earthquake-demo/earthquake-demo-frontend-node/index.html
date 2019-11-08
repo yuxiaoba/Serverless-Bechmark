@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="http://ditu.google.cn/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>
+    <script src="scripts/ajax.js"></script>
+    <title>Natural Disasters</title>
+  </head>
+  <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div id="map"></div>
+          </div>
+          <div id="results" class="col-xs-12 col-md-6">
+              <h1>Natural Disasters in the last 24hrs:</h1>
+              <form id="find">
+                <select name="type" id="type">
+                  <option value="">Show All</option>
+                  <option value="quake">Earthquake</option>
+                  <option value="flood">Flood</option>
+                </select>
+                Measure: <input class="measure" type="number" placeholder="0.0"> and above
+                <br >
+                <button type="submit">Search</button>
+              </form>
+            <div id="info"></div>
+          </div>
+        </div>
+      </div>
+  </body>
+</html>

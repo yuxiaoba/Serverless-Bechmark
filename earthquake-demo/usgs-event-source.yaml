@@ -1,0 +1,14 @@
+apiVersion: sources.eventing.knative.dev/v1alpha1
+kind: ContainerSource
+metadata:
+  labels:
+    controller-tools.k8s.io: "1.0"
+  name: usgs-event-source
+spec:
+  image: harbor.test.com/knative/earth-event-source:v1 #docker.io/gswk/usgs-event-source
+  args: 
+    - "--interval=10"
+  sink:
+    apiVersion: serving.knative.dev/v1alpha1
+    kind: Service
+    name: geocoder

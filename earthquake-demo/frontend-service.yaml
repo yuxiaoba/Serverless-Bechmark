@@ -1,0 +1,14 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: earthquake
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+        - image: harbor.test.com/knative/earth-front:v1 # docker.io/gswk/earthquake-demo-frontend:oscon 
+          imagePullPolicy: Always
+          env:
+            - name: EVENTS_API
+              value: "http://geocoder.default.serverless.dds-sysu.tech" #"http://geocoder.default.dev.gswkbook.com/"

@@ -1,0 +1,47 @@
+html {
+  height: 100vh;
+}
+
+body {
+  background-color: #87ceeb;
+  color: white;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+button {
+  color: black;
+  margin-bottom: 30px;
+}
+
+.container {
+  padding: 0;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+#map {
+  height: 600px;
+  margin-top: 20px;
+}
+
+#results {
+  overflow: scroll;
+  height: 96vh;
+}
+
+.col-xs-12, .col-md-6 {
+  float: none;
+  width: 50%;
+}
+
+.measure, select, input {
+  color: black;
+}
+
+.type {
+  text-transform: capitalize;
+}
