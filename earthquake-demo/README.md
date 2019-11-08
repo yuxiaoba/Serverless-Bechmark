@@ -1,7 +1,6 @@
 This work is a fork version of the work [earthquake-demo](https://github.com/gswk/earthquake-demo).
 The initial version is deploy in Knative 0.6, we update the deployment to Knative 0.10
 Furthermore, we change some source code to deploy in China.
-
 ![Architecture of our demo](images/arch.png)
 
 - [**USGS Event Source**](https://github.com/yuxiaoba/Serverless-Bechmark/tree/master/earthquake-demo/usgs-event-source) - A custom event source that polls the USGS Earthquake data on a given interval
