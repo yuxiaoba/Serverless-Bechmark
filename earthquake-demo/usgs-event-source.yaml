@@ -5,7 +5,7 @@ metadata:
     controller-tools.k8s.io: "1.0"
   name: usgs-event-source
 spec:
-  image: harbor.test.com/knative/earth-event-source:v1 #docker.io/gswk/usgs-event-source
+  image: registry.cn-shenzhen.aliyuncs.com/yuxiaoba/earth-event-source:v1
   args: 
     - "--interval=10"
   sink:
