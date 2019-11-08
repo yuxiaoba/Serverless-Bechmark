@@ -7,7 +7,7 @@ spec:
   template:
     spec:
       containers:
-        - image: harbor.test.com/knative/earth-geocoder:v1 # docker.io/gswk/geocoder
+        - image: registry.cn-shenzhen.aliyuncs.com/yuxiaoba/geocoder:v1
           env:
             - name: DB_HOST
               value: "postgres.default.svc.cluster.local" #"geocodedb-postgresql.default.svc.cluster.local"
