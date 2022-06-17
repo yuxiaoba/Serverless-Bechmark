@@ -1,0 +1,16 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: sentiment # The name of the app
+spec:
+  template:
+    spec:
+      containers:
+      - image: harbor.dds-sysu.tech/functions/sentiment:amd
+        resources:
+          requests:
+            cpu: 200m
+            memory: 256M # container may be killed if reaches this value
+          limits:
+            cpu: 500m
+            memory: 512M # container is killed if reaches this value

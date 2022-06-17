@@ -1,0 +1,14 @@
+provider:
+  name: openfaas
+  gateway: http://192.168.50.23:31112
+
+functions:
+  resizeimage:
+    skip_build: true # 跳过镜像构建
+    image: harbor.dds-sysu.tech/functions/resizeimage:armhf
+    limits:
+      cpu: 100m
+      memory: 40M
+    requests:
+      cpu: 100m
+      memory: 40M  

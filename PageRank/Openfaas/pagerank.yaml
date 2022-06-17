@@ -1,0 +1,14 @@
+provider:
+  name: openfaas
+  gateway: http://192.168.50.23:31112
+
+functions:
+  pagerank:
+    skip_build: true # 跳过镜像构建
+    image: harbor.dds-sysu.tech/functions/pagerank:armhf
+    limits:
+      cpu: 3000m
+      memory: 3072M
+    requests:
+      cpu: 3000m
+      memory: 3072M

@@ -1,0 +1,16 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: resizeimage # The name of the app
+spec:
+  template:
+    spec:
+      containers:
+      - image: harbor.dds-sysu.tech/functions/resizeimage:amd
+        resources:
+          requests:
+            cpu: 20m
+            memory: 64M # container may be killed if reaches this value
+          limits:
+            cpu: 50m
+            memory: 128M # container is killed if reaches this value

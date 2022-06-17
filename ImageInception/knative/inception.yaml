@@ -1,0 +1,22 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: imageinception # The name of the app
+spec:
+  template:
+    spec:
+      containers:
+      - image: harbor.dds-sysu.tech/functions/imageinception:amd
+        resources:
+          requests:
+            cpu: 1000m
+            memory: 1024M # container may be killed if reaches this value
+          limits:
+            cpu: 2000m
+            memory: 2048M # container is killed if reaches this value
+        - name: exec_timeout
+          value: "0"
+        - name: read_timeout
+          value: "100"
+        - name: write_timeout
+          value: "100"

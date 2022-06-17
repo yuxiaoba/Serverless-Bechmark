@@ -1,0 +1,18 @@
+provider:
+  name: openfaas
+  gateway: http://192.168.50.23:31112
+
+functions:
+  imageinception:
+    skip_build: true # 跳过镜像构建
+    image: harbor.dds-sysu.tech/functions/imageinception:armhf
+    limits:
+      cpu: 2000m
+      memory: 2048M
+    requests:
+      cpu: 1000m
+      memory: 1024M
+    environment:
+      read_timeout: 100 # seconds
+      write_timeout: 100 # seconds
+      exec_timeout: 0 # disable 

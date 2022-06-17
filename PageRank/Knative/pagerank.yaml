@@ -1,0 +1,23 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: pagerank # The name of the app
+spec:
+  template:
+    spec:
+      containers:
+        - image: harbor.dds-sysu.tech/functions/pagerank:amd
+          resources:
+            requests:
+              cpu: 6000m
+              memory: 6114M # container may be killed if reaches this value
+            limits:
+              cpu: 6000m
+              memory: 6114M # container is killed if reaches this value
+          env:
+            - name: exec_timeout
+              value: "0"
+            - name: read_timeout
+              value: "100"
+            - name: write_timeout
+              value: "100"
