@@ -1,2 +1,2 @@
 # Serverless-Bechmark
-FaaS benchmark FaaSDeliver 
+FaaS benchmark for FaaSDeliver 
